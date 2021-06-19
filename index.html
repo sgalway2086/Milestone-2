@@ -8,17 +8,24 @@
   </head>
   <body>
       <section>
-          <button></button>
-          <button></button>
-          <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+          <button id = "startButton" onclick = "startGame()">Play Simon!</button>
+          <button id = "resetButton" onclick = "reset()">Reset</button>
+          <div id = "gamewrap">
+              <div onmouseover = "greenLightHover()" onmouseleave = "greenLightLeave()"
+              onclick = "clickGreen()" class = "leftgame" id = "green"></div>
+              <div onmouseover = "redLightHover()" onmouseleave = "redLightLeave()"
+              onclick = "clickRed()" class = "rightgame" id = "red"></div>
+              <div onmouseover = "yellowLightHover()" onmouseleave = "yellowLightLeave()"
+              onclick = "clickYellow()" class = "leftgame" id = "yellow"></div>
+              <div onmouseover = "blueLightHover()" onmouseleave = "blueLightLeave()"
+              onclick = "clickBlue()" class = "rightgame" id = "blue"></div>
           </div>
           <div>
-              <p>CURRENT SCORE: </p>
-              <p>HIGH SCORE: </p>
+              <p id = "gameStatus">SIMONS TURN...</p>
+          </div>
+          <div>
+              <p>CURRENT SCORE: <span id="currentscore"></span></p>
+              <p>HIGH SCORE: <span id="highscore"></span></p>
           </div>
       </section>
     <script src="script.js"></script>
