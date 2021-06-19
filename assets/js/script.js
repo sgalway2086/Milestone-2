@@ -11,7 +11,9 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
-/*The following functions replicate the "hover" function from css, They are done in javascript as once the color is changed through javascript, the css functions cease functioning */
+/*The following functions replicate the "hover" function from css. 
+They are done in javascript as once the color is changed through javascript, 
+the css functions cease functioning */
 function redLightHover(){
   if(animationCursor == 1){
     document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 90 + ',' + 90 + ')';
@@ -64,7 +66,8 @@ function reanimate(){
 }
 
 function turn(){
-  /*gameOn is deactivated here to prevent the user from being able to click the colours as they appear. animationCursor is also deactivated*/
+  /*gameOn is deactivated here to prevent the user from being 
+  able to click the colours as they appear. animationCursor is also deactivated*/
   gameOn = 0;
   document.getElementById("gameStatus").innerHTML = "SIMONS TURN...";
   animationCursor = 0;
@@ -140,7 +143,9 @@ with all animations happening instantaneously.*/
           reanimate();
           document.getElementById("gameStatus").innerHTML = "PLAYERS TURN";
           gameOn = 1;
-        }, delay + 500); /*This part of the code is dedicated to insuring the mouse cursors hovering animation begins to function a set time after the code has cycled through the array*/
+        }, delay + 500); /*This part of the code is dedicated to insuring 
+        the mouse cursors hovering animation begins to function a set time 
+        after the code has cycled through the array*/
       }
   }
 }
@@ -221,4 +226,14 @@ function reset(){
     document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
     document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
   }
+}
+
+/*Starts the game and generates the first randomised number of the array. This corresponds with one of the onscreen colours. The animation of the mouse hovering over each section is also disabled here, as it could be intrusive towards the playing experience and prove confusing.*/
+function startGame(){
+  animationCursor = 0;
+  array.push(Math.floor(Math.random() * 4));
+  turn();
+  document.getElementById("currentscore").innerHTML = 0;
+  document.getElementById("gameStatus").style.visibility = "visible";
+  document.getElementById("startButton").style.visibility = "hidden";
 }
