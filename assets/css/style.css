@@ -42,3 +42,8 @@
   background-color: rgb(0 0 255);
   border-bottom-right-radius: 250px;
 }
+
+#game{
+  width: 60%;
+  margin: auto;
+}
