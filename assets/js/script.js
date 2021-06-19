@@ -204,3 +204,21 @@ function clickYellow(){
     checker();
   }
 }
+
+
+//Reset button to allow players the option to restart the game on their turn//
+function reset(){
+  if(gameOn == 1){
+    array = [];
+    userArray = [];
+    document.getElementById("currentscore").innerHTML = 0;
+    gameOn = 0;
+    document.getElementById("gameStatus").style.visibility = "hidden";
+    document.getElementById("startButton").style.visibility = "visible";
+    document.getElementById("startButton").innerHTML = "Play Simon!";
+    document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+    document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+    document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+    document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+  }
+}
