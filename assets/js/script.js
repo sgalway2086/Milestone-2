@@ -1,0 +1,12 @@
+let array = [];
+let userArray = [];
+let counter = 0;
+let counterTurns = 0;
+let counterHighScore = 0;
+let gameOn = 0; /*Prevents potential problems with array activation before game starts*/
+let animationCursor = 1;
+let delay = 1000;
+const beep1 = new Audio('../assets/audio/beep1.mp3');
+const beep2 = new Audio('../assets/audio/beep2.mp3');
+const beep3 = new Audio('../assets/audio/beep3.mp3');
+const beep4 = new Audio('../assets/audio/beep4.mp3');
