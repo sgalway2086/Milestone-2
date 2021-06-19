@@ -237,3 +237,37 @@ function startGame(){
   document.getElementById("gameStatus").style.visibility = "visible";
   document.getElementById("startButton").style.visibility = "hidden";
 }
+
+function checker(){
+  if(userArray.length == array.length){
+    gameOn = 0;
+    animationCursor = 0;
+    for(let i = 0; i < counterTurns;){
+      if(array[i] == userArray[i]){
+        i++;
+      }
+      else{
+        array = [];
+        userArray = [];
+        document.getElementById("currentscore").innerHTML = 0;
+        gameOn = 0;
+        document.getElementById("gameStatus").innerHTML = "GAME OVER";
+        document.getElementById("startButton").style.visibility = "visible";
+        document.getElementById("startButton").innerHTML = "Play Again";
+        document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+        document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+        document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+        document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+        break;
+      } gameOn = 1;
+    }
+    if(gameOn == 1){
+      array.push(Math.floor(Math.random()*4));
+      userArray = [];
+      scoreCounter();
+      highScore();
+      counter = 0;
+      turn();
+    }
+  }
+}
