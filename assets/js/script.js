@@ -144,3 +144,63 @@ with all animations happening instantaneously.*/
       }
   }
 }
+
+function clickGreen(){
+  if(gameOn == 1){
+    counterTurns = counterTurns + 1;
+    userArray.push(0);
+    setTimeout(function(){
+      document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+    }, 50);
+    beep1.play()
+    setTimeout(function(){
+      greenLightHover();
+    }, 100);
+    checker();
+  }
+}
+
+function clickRed(){
+  if(gameOn == 1){
+    counterTurns = counterTurns + 1;
+    userArray.push(1);
+    setTimeout(function(){
+      document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+    }, 50);
+    beep2.play()
+    setTimeout(function(){
+      redLightHover();
+    }, 100);
+    checker();
+  }
+}
+
+function clickBlue(){
+  if(gameOn == 1){
+    counterTurns = counterTurns + 1;
+    userArray.push(2);
+    setTimeout(function(){
+      document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+    }, 50);
+    beep3.play()
+    setTimeout(function(){
+      blueLightHover();
+    }, 100);
+    checker();
+  }
+}
+
+function clickYellow(){
+  if(gameOn == 1){
+    counterTurns = counterTurns + 1;
+    userArray.push(3);
+    setTimeout(function(){
+      document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+    }, 50);
+    beep4.play()
+    setTimeout(function(){
+      yellowLightHover();
+    }, 100);
+    checker();
+  }
+}
