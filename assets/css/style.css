@@ -47,3 +47,8 @@
   width: 60%;
   margin: auto;
 }
+
+#gameStatus{
+  text-align: center;
+  visibility: hidden;
+}
