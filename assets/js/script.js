@@ -271,3 +271,16 @@ function checker(){
     }
   }
 }
+
+/*This tracks the current user score and resets when the game is restarted*/
+function scoreCounter(){
+  document.getElementById("currentscore").innerHTML = (array.length - 1);
+  counter = document.getElementById("currentscore").innerHTML = (array.length - 1);
+}
+/*This function is designed to check that if the user input reaches a new record number, that it will record this new number and leave it on the page visible to the user*/
+function highScore(){
+  if(array.length > counterHighScore ){
+    document.getElementById("highscore").innerHTML = array.length - 1;
+    counterHighScore = array.length;
+  }
+}
