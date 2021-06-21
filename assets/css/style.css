@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
 *{
   margin: 0px;
   background-color: #f8f8ff;
+  font-family: 'Oswald', sans-serif;
 }
 
 .leftgame{
@@ -63,6 +66,15 @@ footer p{
     color: #f8f8ff;
     background-color: #922B21;
     padding: 10px 0px 10px 10px;
+}
+
+#description{
+    margin: 0px 1%;
+    font-weight: 300;
+}
+
+#scorecard{
+    margin: 0px 1%;
 }
 
 @media screen and (max-width: 500px) {
