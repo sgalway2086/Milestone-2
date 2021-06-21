@@ -201,11 +201,11 @@ function clickGreen(){
     userArray.push(0);
     setTimeout(function(){
       document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-    }, 50);
+    }, 25);
     beep1.play()
     setTimeout(function(){
       greenLightHover();
-    }, 100);
+    }, 50);
     checker();
   }
 }
@@ -216,11 +216,11 @@ function clickRed(){
     userArray.push(1);
     setTimeout(function(){
       document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-    }, 50);
+    }, 25);
     beep2.play()
     setTimeout(function(){
       redLightHover();
-    }, 100);
+    }, 50);
     checker();
   }
 }
@@ -231,11 +231,11 @@ function clickBlue(){
     userArray.push(2);
     setTimeout(function(){
       document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-    }, 50);
+    }, 25);
     beep3.play()
     setTimeout(function(){
       blueLightHover();
-    }, 100);
+    }, 50);
     checker();
   }
 }
@@ -246,11 +246,11 @@ function clickYellow(){
     userArray.push(3);
     setTimeout(function(){
       document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
-    }, 50);
+    }, 25);
     beep4.play()
     setTimeout(function(){
       yellowLightHover();
-    }, 100);
+    }, 50);
     checker();
   }
 }
@@ -273,7 +273,10 @@ function reset(){
   }
 }
 
-/*Starts the game and generates the first randomised number of the array. This corresponds with one of the onscreen colours. The animation of the mouse hovering over each section is also disabled here, as it could be intrusive towards the playing experience and prove confusing.*/
+/*Starts the game and generates the first randomised number of the array. 
+This corresponds with one of the onscreen colours. The animation of the 
+mouse hovering over each section is also disabled here, as it could be 
+intrusive towards the playing experience and prove confusing.*/
 function startGame(){
   animationCursor = 0;
   array.push(Math.floor(Math.random() * 4));
