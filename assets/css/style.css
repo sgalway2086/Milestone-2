@@ -73,8 +73,10 @@ footer p{
     font-weight: 300;
 }
 
-#scorecard{
-    margin: 0px 1%;
+.scorehalf{
+    width: 49%;
+    padding: 0px 0px 0px 1%;
+    float:left;
 }
 
 @media screen and (max-width: 500px) {
