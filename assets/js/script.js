@@ -7,10 +7,25 @@ let gameOn = 0; /*Prevents potential problems with array activation before game 
 let animationCursor = 1;
 let delay = 1000;
 let gameSpeed = 1;
+let speedIncrease = 1000;
+let lightUpDelay = 250;
+let lightUpDelayOffset = 500;
 const beep1 = new Audio('../assets/audio/beep1.mp3');
 const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
+
+function gameSpeedOne(){
+    gameSpeed = 1;
+}
+
+function gameSpeedTwo(){
+    gameSpeed = 2;
+}
+
+function gameSpeedThree(){
+    gameSpeed = 3;
+}
 
 /*The following functions replicate the "hover" function from css. 
 They are done in javascript as once the color is changed through javascript, 
@@ -78,6 +93,26 @@ function turn(){
   document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
   document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
   document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+  if (gameSpeed == 1){
+      delay = 1000;
+      speedIncrease = 1000;
+      lightUpDelay = 250;
+      lightUpDelayOffset = 500;
+  }
+  else{
+      if(gameSpeed == 2){
+          delay = 800;
+          speedIncrease = 800;
+          lightUpDelay = 200;
+          lightUpDelayOffset = 400;
+      }
+      else{
+          delay = 600;
+          speedIncrease = 600;
+          lightUpDelay = 150;
+          lightUpDelayOffset = 300;
+      }
+  }
 /*The below "for" function is to activate the light up animation of the computer. 
 It functions by taking the arrays numbers (0 - 3) and assigning a certain colour 
 to each using "if" functions. The "timeOut" function of javascript will execute code 
@@ -92,59 +127,59 @@ with all animations happening instantaneously.*/
       if(x === 0) {
         setTimeout(function(){
           document.getElementById("green").style.backgroundColor = 'rgb(' + 90 + ',' + 255 + ',' + 90 + ')';
-        }, 250);
+        }, lightUpDelay);
         setTimeout(function(){
           beep1.play()
-        }, 250);
+        }, lightUpDelay);
         setTimeout(function(){
           document.getElementById("green").style.backgroundColor = 'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-        }, 500);
+        }, lightUpDelayOffset);
       }
       else{
         if(x === 1) {
           setTimeout(function(){
             document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 90 + ',' + 90 + ')';
-          }, 250);
+          }, lightUpDelay);
           setTimeout(function(){
           beep2.play()
-        }, 250);
+          }, lightUpDelay);
           setTimeout(function(){
             document.getElementById("red").style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-          }, 500);
+          }, lightUpDelayOffset);
         }
         else{
           if(x === 2) {
             setTimeout(function(){ 
               document.getElementById("blue").style.backgroundColor = 'rgb(' + 90 + ',' + 90 + ',' + 255 + ')';
-            }, 250);
+            }, lightUpDelay);
             setTimeout(function(){
               beep3.play()
-            }, 250);
+            }, lightUpDelay);
             setTimeout(function(){ 
               document.getElementById("blue").style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-            }, 500);
+            }, lightUpDelayOffset);
           }
           else{
             setTimeout(function(){
               document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 120 + ')';
-            }, 250);
+            }, lightUpDelay);
             setTimeout(function(){
               beep4.play()
-            }, 250);
+            }, lightUpDelay);
             setTimeout(function(){
               document.getElementById("yellow").style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
-            }, 500);    
+            }, lightUpDelayOffset);    
           }
         }
       }
     }, delay);
-    delay = delay + 1000;
+    delay = (delay + speedIncrease);
     if(i == y){
         setTimeout(function(){
           reanimate();
           document.getElementById("gameStatus").innerHTML = "PLAYERS TURN";
           gameOn = 1;
-        }, delay + 500); /*This part of the code is dedicated to insuring 
+        }, delay + lightUpDelayOffset); /*This part of the code is dedicated to insuring 
         the mouse cursors hovering animation begins to function a set time 
         after the code has cycled through the array*/
       }
