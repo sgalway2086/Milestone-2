@@ -7,6 +7,15 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+      <header>
+          <h1>GamesLab</h1>
+      </header>
+      <section>
+          <h2>Simon</h2>
+          <p>The rules are simple: The computer will light up a quadrant, 
+              then you match the pattern. Each turn one more light is added 
+              until you lose. See how high you can get your score!</p>
+      </section>
       <section id = "game">
           <button id = "startButton" onclick = "startGame()">Play Simon!</button>
           <button id = "resetButton" onclick = "reset()">Reset</button>
@@ -28,6 +37,10 @@
               <p>HIGH SCORE: <span id="highscore"></span></p>
           </div>
       </section>
+      <footer>
+          <span>Copyright: GamesLab 2021</span>
+      </footer>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>
