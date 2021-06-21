@@ -19,9 +19,10 @@
       <section id = "game">
           <button id = "startButton" onclick = "startGame()">Play Simon!</button>
           <button id = "resetButton" onclick = "reset()">Reset</button>
-          <button id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
-          <button id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
-          <button id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
+          <span>Speed:</span>
+          <button class = "speedButton" id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
+          <button class = "speedButton" id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
+          <button class = "speedButton" id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
 
           <div id = "gamewrap">
               <div onmouseover = "greenLightHover()" onmouseleave = "greenLightLeave()"

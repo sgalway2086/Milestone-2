@@ -6,7 +6,7 @@ let counterHighScore = 0;
 let gameOn = 0; /*Prevents potential problems with array activation before game starts*/
 let animationCursor = 1;
 let delay = 1000;
-let gameSpeed = 1;
+let gameSpeed = 2;
 let speedIncrease = 1000;
 let lightUpDelay = 250;
 let lightUpDelayOffset = 500;
@@ -17,14 +17,23 @@ const beep4 = new Audio('../assets/audio/beep4.mp3');
 
 function gameSpeedOne(){
     gameSpeed = 1;
+    document.getElementById("speedSlow").style.textDecoration = "underline"
+    document.getElementById("speedMedium").style.textDecoration = "none";
+    document.getElementById("speedFast").style.textDecoration = "none";
 }
 
 function gameSpeedTwo(){
     gameSpeed = 2;
+    document.getElementById("speedMedium").style.textDecoration = "underline";
+    document.getElementById("speedFast").style.textDecoration = "none";
+    document.getElementById("speedSlow").style.textDecoration = "none";
 }
 
 function gameSpeedThree(){
     gameSpeed = 3;
+    document.getElementById("speedFast").style.textDecoration = "underline";
+    document.getElementById("speedMedium").style.textDecoration = "none";
+    document.getElementById("speedSlow").style.textDecoration = "none";
 }
 
 /*The following functions replicate the "hover" function from css. 

@@ -6,6 +6,16 @@
   font-family: 'Oswald', sans-serif;
 }
 
+#speedMedium{
+    text-decoration: underline;
+}
+
+.speedButton{
+    border: none;
+    background-color: transparent;
+    outline: none; 
+}
+
 .leftgame{
   width: 250px;
   height: 250px;
