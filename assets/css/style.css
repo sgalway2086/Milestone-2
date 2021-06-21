@@ -52,3 +52,15 @@
   text-align: center;
   visibility: hidden;
 }
+
+header h1{
+    color: #f8f8ff;
+    background-color: #922B21;
+    padding: 10px 0px 10px 10px;
+}
+
+footer p{
+    color: #f8f8ff;
+    background-color: #922B21;
+    padding: 10px 0px 10px 10px;
+}
