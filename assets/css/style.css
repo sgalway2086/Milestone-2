@@ -64,3 +64,38 @@ footer p{
     background-color: #922B21;
     padding: 10px 0px 10px 10px;
 }
+
+@media screen and (max-width: 500px) {
+  #green{
+    border-top-left-radius: 0px;
+  }
+  #red{
+    border-top-right-radius: 0px;
+  }
+  #yellow{
+    border-bottom-left-radius: 0px;
+  }
+  #blue{
+    border-bottom-right-radius: 0px;
+  }
+  .leftgame{
+    width: 48%;
+    height: 40vh;
+    margin: 1%;
+    border: none;
+  }
+  .rightgame{
+    width: 48%;
+    height: 40vh;
+    margin: 1% 0px 1% 1%;
+    border: none;
+    float: left;
+  }
+  #gamewrap{
+    width: 100%;
+  }
+  #game{
+  width: 100%;
+  margin: auto;
+  }
+}
