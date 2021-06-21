@@ -3,7 +3,8 @@ let userArray = [];
 let counter = 0;
 let counterTurns = 0;
 let counterHighScore = 0;
-let gameOn = 0; /*Prevents potential problems with array activation before game starts*/
+let gameOn = 0; /*Prevents potential problems 
+with array activation before game starts*/
 let animationCursor = 1;
 let delay = 1000;
 let gameSpeed = 2;
@@ -325,7 +326,9 @@ function scoreCounter(){
   document.getElementById("currentscore").innerHTML = (array.length - 1);
   counter = document.getElementById("currentscore").innerHTML = (array.length - 1);
 }
-/*This function is designed to check that if the user input reaches a new record number, that it will record this new number and leave it on the page visible to the user*/
+/*This function is designed to check that if the user input 
+reaches a new record number, that it will record this new 
+number and leave it on the page visible to the user*/
 function highScore(){
   if(array.length > counterHighScore ){
     document.getElementById("highscore").innerHTML = array.length - 1;
