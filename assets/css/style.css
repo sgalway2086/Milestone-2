@@ -6,8 +6,7 @@
   font-family: 'Oswald', sans-serif;
 }
 
-#gameStatusLarge{
-  visibility: hidden;
+#gameStatusLargeCircle{
   position: absolute;
   top: 0px;
   left: 0px;
@@ -21,6 +20,13 @@
   color: white;
   margin-left: 15px;
   margin-top: 15px;
+  visibility: hidden;
+}
+
+#gameStatusLarge{
+  background-color: transparent;
+  visibility: hidden;
+  margin: 20px 0px 0px 20px
 }
 
 #speedMedium{
@@ -168,7 +174,7 @@ footer p{
     margin-top: 10px;
   }
 
-  #gameStatusLarge{
+  #gameStatusLargeCircle{
     width: 136px;
     height: 136px;
     border-radius: 68px;
@@ -215,7 +221,7 @@ footer p{
     font-size: 20px;
   }
 
-  #gameStatusLarge{
+  #gameStatusLargeCircle{
     width: 86px;
     height: 86px;
     border-radius: 45px;
@@ -223,9 +229,16 @@ footer p{
     margin-left: 5px;
     margin-top: 5px;
   }
+  
+  #gameStatusLarge{
+    margin: 13px 0px 0px 10px
+  }
 }
 
 @media screen and (max-width: 540px) {
+  #gameStatusLarge{
+      font-size: 0px;
+  }
   #green{
     border-top-left-radius: 0px;
   }
@@ -264,7 +277,7 @@ footer p{
   #largePlayButton{
       visibility: hidden;
   }
-  #gameStatusLarge{
+  #gameStatusLargeCircle{
     visibility: hidden;
     width: 0px;
     height: 0px;

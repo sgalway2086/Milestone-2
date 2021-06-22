@@ -326,6 +326,7 @@ function startGame(){
   document.getElementById("startButton").style.visibility = "hidden";
   document.getElementById("largePlayButton").style.visibility = "hidden";
   document.getElementById("gameStatusLarge").style.visibility = "visible";
+  document.getElementById("gameStatusLargeCircle").style.visibility = "visible";
 }
 
 function checker(){
