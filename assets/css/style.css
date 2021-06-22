@@ -111,6 +111,28 @@ footer p{
   }
 }
 
+@media screen and (max-width: 740px) {
+  .leftgame{
+    width: 160px;
+    height: 160px;
+    float: left;
+    border: solid 3px;
+  }
+
+  .rightgame{
+    width: 160px;
+    height: 160px;
+    float: right;
+    border: solid 3px;
+  }
+  
+  #gamewrap{
+    width: 332px;
+    height: auto;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #green{
     border-top-left-radius: 0px;
