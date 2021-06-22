@@ -11,6 +11,7 @@ let gameSpeed = 2;
 let speedIncrease = 1000;
 let lightUpDelay = 250;
 let lightUpDelayOffset = 500;
+let scoreTurnChecker = 0;
 const beep1 = new Audio('../assets/audio/beep1.mp3');
 const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
@@ -118,6 +119,7 @@ function turn(){
   /*gameOn is deactivated here to prevent the user from being 
   able to click the colours as they appear. animationCursor is also deactivated*/
   gameOn = 0;
+  scoreTurnChecker = 0;
   document.getElementById("gameStatus").innerHTML = "SIMONS TURN...";
   document.getElementById("gameStatusLarge").innerHTML = "Thinking...";
   animationCursor = 0;
@@ -336,6 +338,32 @@ function startGame(){
 }
 
 function checker(){
+  if(array[scoreTurnChecker] == userArray[scoreTurnChecker]){
+    scoreTurnChecker = scoreTurnChecker + 1;
+  }
+  else{
+    array = [];
+    userArray = [];
+    scoreTurnChecker = 0;
+    document.getElementById("currentscore").innerHTML = 0;
+    gameOn = 0;
+    document.getElementById("gameStatus").innerHTML = "GAME OVER";
+    document.getElementById("gameStatusLarge").innerHTML = "Game Over";
+    document.getElementById("startButton").style.visibility = "visible";
+    document.getElementById("startButton").innerHTML = "Play Again";
+    document.getElementById("red").style.backgroundColor = 
+    'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+    document.getElementById("green").style.backgroundColor = 
+    'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+    document.getElementById("blue").style.backgroundColor = 
+    'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+    document.getElementById("yellow").style.backgroundColor = 
+    'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+    setTimeout(function(){
+      document.getElementById("gameStatusLarge").style.visibility = "hidden";
+      document.getElementById("resetButtonLarge").style.visibility = "visible";  
+    }, 2000);
+  }
   if(userArray.length == array.length){
     gameOn = 0;
     animationCursor = 0;
@@ -368,14 +396,17 @@ function checker(){
         break;
       } gameOn = 1;
     }
-    if(gameOn == 1){
+    if(array.length > 0){
+      if(gameOn == 1){
       array.push(Math.floor(Math.random()*4));
       userArray = [];
       scoreCounter();
       highScore();
       counter = 0;
       turn();
+      }
     }
+    
   }
 }
 
