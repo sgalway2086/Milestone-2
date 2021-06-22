@@ -133,7 +133,7 @@ footer p{
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   #green{
     border-top-left-radius: 0px;
   }
