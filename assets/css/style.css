@@ -26,14 +26,10 @@
 #gameStatusLarge{
   background-color: transparent;
   visibility: hidden;
-  margin: 60px 0px 0px 5px;
+  margin-top: 60px;
   width: 170px;
-}
-
-#gameStatusLarge p{
   text-align: center;
 }
-
 
 #speedMedium{
   text-decoration: underline;
@@ -191,7 +187,7 @@ footer p{
   #gameStatusLarge{
     background-color: transparent;
     visibility: hidden;
-    margin: 45px 0px 0px 5px;
+    margin-top: 45px;
     width: 140px;
   }
 }
@@ -244,7 +240,7 @@ footer p{
   }
   
   #gameStatusLarge{
-    margin: 25px 0px 0px 3px;
+    margin-top: 25px;
     width: 90px;
   }
 }
@@ -295,5 +291,6 @@ footer p{
     visibility: hidden;
     width: 0px;
     height: 0px;
+    border-radius: 0px;
   }
 }
