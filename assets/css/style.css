@@ -43,7 +43,8 @@
   width: 170px;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
+  left: 17px;
 }
 
 #resetButtonLarge{
