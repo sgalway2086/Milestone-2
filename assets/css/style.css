@@ -26,8 +26,14 @@
 #gameStatusLarge{
   background-color: transparent;
   visibility: hidden;
-  margin: 20px 0px 0px 20px
+  margin: 60px 0px 0px 5px;
+  width: 170px;
 }
+
+#gameStatusLarge p{
+  text-align: center;
+}
+
 
 #speedMedium{
   text-decoration: underline;
@@ -181,6 +187,13 @@ footer p{
     margin-left: 10px;
     margin-top: 10px;
   }
+
+  #gameStatusLarge{
+    background-color: transparent;
+    visibility: hidden;
+    margin: 45px 0px 0px 5px;
+    width: 140px;
+  }
 }
 @media screen and (max-width: 740px) {
   .leftgame{
@@ -231,13 +244,14 @@ footer p{
   }
   
   #gameStatusLarge{
-    margin: 13px 0px 0px 10px
+    margin: 25px 0px 0px 3px;
+    width: 90px;
   }
 }
 
 @media screen and (max-width: 540px) {
   #gameStatusLarge{
-      font-size: 0px;
+    font-size: 0px;
   }
   #green{
     border-top-left-radius: 0px;
