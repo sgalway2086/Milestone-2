@@ -89,6 +89,28 @@ footer p{
   float:left;
 }
 
+@media screen and (max-width: 920px) {
+  .leftgame{
+    width: 200px;
+    height: 200px;
+    float: left;
+    border: solid 5px;
+  }
+
+  .rightgame{
+    width: 200px;
+    height: 200px;
+    float: right;
+    border: solid 5px;
+  }
+  
+  #gamewrap{
+    width: 420px;
+    height: auto;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #green{
     border-top-left-radius: 0px;
