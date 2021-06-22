@@ -34,6 +34,18 @@
   width: 540px;
   height: auto;
   margin: auto;
+  position: relative;
+}
+
+#centerCircle{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: absolute;
+  top: 170px;
+  left: 170px;
+  background-color: black;
+  z-index: 2;
 }
 
 #green{
@@ -109,6 +121,15 @@ footer p{
     height: auto;
     margin: auto;
   }
+
+  #centerCircle{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    position: absolute;
+    top: 130px;
+    left: 130px;
+  }
 }
 
 @media screen and (max-width: 740px) {
@@ -130,6 +151,15 @@ footer p{
     width: 332px;
     height: auto;
     margin: auto;
+  }
+
+  #centerCircle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: 116px;
+    left: 116px;
   }
 }
 
@@ -165,5 +195,8 @@ footer p{
   #game{
   width: 100%;
   margin: auto;
+  }
+  #centerCircle{
+      visibility: hidden;
   }
 }
