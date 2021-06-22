@@ -17,6 +17,60 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
+function colourDefault(){
+  redDefault();
+  yellowDefault();
+  blueDefault();
+  greenDefault();
+}
+
+function redDefault(){
+  document.getElementById("red").style.backgroundColor = 
+  `rgb(${255}, ${0}, ${0})`
+}
+
+function redLit(){
+  document.getElementById("red").style.backgroundColor = 
+  `rgb(${255}, ${90}, ${90})`
+}
+
+function blueDefault(){
+  document.getElementById("blue").style.backgroundColor = 
+  `rgb(${0}, ${0}, ${255})`
+}
+
+function blueLit(){
+  document.getElementById("blue").style.backgroundColor = 
+  `rgb(${90}, ${90}, ${255})`
+}
+
+function greenDefault(){
+  document.getElementById("green").style.backgroundColor = 
+  `rgb(${0}, ${255}, ${0})`
+}
+
+function greenLit(){
+  document.getElementById("green").style.backgroundColor = 
+  `rgb(${90}, ${255}, ${90})`
+}
+
+function yellowDefault(){
+  document.getElementById("yellow").style.backgroundColor = 
+  `rgb(${255}, ${255}, ${0})`
+}
+
+function yellowLit(){
+  document.getElementById("yellow").style.backgroundColor = 
+  `rgb(${255}, ${255}, ${90})`
+}
+
+
+
+
+
+
+
+
 function resetLarge(){
   reset();
   startGame();
@@ -58,55 +112,47 @@ They are done in javascript as once the color is changed through javascript,
 the css functions cease functioning */
 function redLightHover(){
   if(animationCursor == 1){
-    document.getElementById("red").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 90 + ',' + 90 + ')';
+    redLit();
   }
 }
 
 function redLightLeave(){
   if(animationCursor == 1){
-    document.getElementById("red").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+    redDefault();
   }
 }
 
 function yellowLightHover(){
   if(animationCursor == 1){
-    document.getElementById("yellow").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 255 + ',' + 90 + ')';
+    yellowLit();
   }
 }
 function yellowLightLeave(){
   if(animationCursor == 1){
-    document.getElementById("yellow").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+    yellowDefault();
   }
 }
 
 function greenLightHover(){
   if(animationCursor == 1){
-    document.getElementById("green").style.backgroundColor = 
-    'rgb(' + 90 + ',' + 255 + ',' + 90 + ')';
+    greenLit();
   }
 }
 function greenLightLeave(){
   if(animationCursor == 1){
-    document.getElementById("green").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+    greenDefault();
   }
 }
 
 function blueLightHover(){
   if(animationCursor == 1){
-    document.getElementById("blue").style.backgroundColor = 
-    'rgb(' + 90 + ',' + 90 + ',' + 255 + ')';
+    blueLit();
   }
 }
 
 function blueLightLeave(){
   if(animationCursor == 1){
-    document.getElementById("blue").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+    blueDefault();
   }
 }
 
@@ -125,14 +171,7 @@ function turn(){
   animationCursor = 0;
   delay = 1000;
   //resets colors to prevent animation errors//
-  document.getElementById("blue").style.backgroundColor = 
-  'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-  document.getElementById("red").style.backgroundColor = 
-  'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-  document.getElementById("green").style.backgroundColor = 
-  'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-  document.getElementById("yellow").style.backgroundColor = 
-  'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+  colourDefault();
   if (gameSpeed == 1){
       delay = 1000;
       speedIncrease = 1000;
@@ -166,56 +205,48 @@ with all animations happening instantaneously.*/
     setTimeout(function(){
       if(x === 0) {
         setTimeout(function(){
-          document.getElementById("green").style.backgroundColor = 
-          'rgb(' + 90 + ',' + 255 + ',' + 90 + ')';
+          greenLit();
         }, lightUpDelay);
         setTimeout(function(){
           beep1.play()
         }, lightUpDelay);
         setTimeout(function(){
-          document.getElementById("green").style.backgroundColor = 
-          'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+          greenDefault();
         }, lightUpDelayOffset);
       }
       else{
         if(x === 1) {
           setTimeout(function(){
-            document.getElementById("red").style.backgroundColor = 
-            'rgb(' + 255 + ',' + 90 + ',' + 90 + ')';
+            redLit();
           }, lightUpDelay);
           setTimeout(function(){
           beep2.play()
           }, lightUpDelay);
           setTimeout(function(){
-            document.getElementById("red").style.backgroundColor = 
-            'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+            redDefault();
           }, lightUpDelayOffset);
         }
         else{
           if(x === 2) {
             setTimeout(function(){ 
-              document.getElementById("blue").style.backgroundColor = 
-              'rgb(' + 90 + ',' + 90 + ',' + 255 + ')';
+              blueLit();
             }, lightUpDelay);
             setTimeout(function(){
               beep3.play()
             }, lightUpDelay);
             setTimeout(function(){ 
-              document.getElementById("blue").style.backgroundColor = 
-              'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+              blueDefault();
             }, lightUpDelayOffset);
           }
           else{
             setTimeout(function(){
-              document.getElementById("yellow").style.backgroundColor = 
-              'rgb(' + 255 + ',' + 255 + ',' + 120 + ')';
+              yellowLit();
             }, lightUpDelay);
             setTimeout(function(){
               beep4.play()
             }, lightUpDelay);
             setTimeout(function(){
-              document.getElementById("yellow").style.backgroundColor = 
-              'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+              yellowDefault();
             }, lightUpDelayOffset);    
           }
         }
@@ -240,8 +271,7 @@ function clickGreen(){
     counterTurns = counterTurns + 1;
     userArray.push(0);
     setTimeout(function(){
-      document.getElementById("green").style.backgroundColor = 
-      'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
+      greenDefault();
     }, 25);
     beep1.play()
     setTimeout(function(){
@@ -256,8 +286,7 @@ function clickRed(){
     counterTurns = counterTurns + 1;
     userArray.push(1);
     setTimeout(function(){
-      document.getElementById("red").style.backgroundColor = 
-      'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
+      redDefault();
     }, 25);
     beep2.play()
     setTimeout(function(){
@@ -272,8 +301,7 @@ function clickBlue(){
     counterTurns = counterTurns + 1;
     userArray.push(2);
     setTimeout(function(){
-      document.getElementById("blue").style.backgroundColor = 
-      'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
+      blueDefault();
     }, 25);
     beep3.play()
     setTimeout(function(){
@@ -288,8 +316,7 @@ function clickYellow(){
     counterTurns = counterTurns + 1;
     userArray.push(3);
     setTimeout(function(){
-      document.getElementById("yellow").style.backgroundColor = 
-      'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+      yellowDefault();
     }, 25);
     beep4.play()
     setTimeout(function(){
@@ -310,14 +337,7 @@ function reset(){
     document.getElementById("gameStatus").style.visibility = "hidden";
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Simon!";
-    document.getElementById("red").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-    document.getElementById("green").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-    document.getElementById("blue").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-    document.getElementById("yellow").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+    colourDefault();
   }
 }
 
@@ -357,13 +377,7 @@ function checker(){
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Again";
     document.getElementById("red").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-    document.getElementById("green").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-    document.getElementById("blue").style.backgroundColor = 
-    'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-    document.getElementById("yellow").style.backgroundColor = 
-    'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+    colourDefault();
     setTimeout(function(){
       document.getElementById("gameStatusLarge").style.visibility = "hidden";
       document.getElementById("resetButtonLarge").style.visibility = "visible";  
@@ -385,14 +399,7 @@ function checker(){
         document.getElementById("gameStatusLarge").innerHTML = "Game Over";
         document.getElementById("startButton").style.visibility = "visible";
         document.getElementById("startButton").innerHTML = "Play Again";
-        document.getElementById("red").style.backgroundColor = 
-        'rgb(' + 255 + ',' + 0 + ',' + 0 + ')';
-        document.getElementById("green").style.backgroundColor = 
-        'rgb(' + 0 + ',' + 255 + ',' + 0 + ')';
-        document.getElementById("blue").style.backgroundColor = 
-        'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
-        document.getElementById("yellow").style.backgroundColor = 
-        'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+        colourDefault();
         setTimeout(function(){
           document.getElementById("gameStatusLarge").style.visibility = "hidden";
           document.getElementById("resetButtonLarge").style.visibility = "visible";  
