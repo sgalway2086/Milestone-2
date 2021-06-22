@@ -7,6 +7,20 @@
   color: #0d0d0d;
 }
 
+
+
+#resetButton{
+  visibility: hidden;
+}
+
+#gameStatus{
+  color: #f8f8ff;
+}
+
+#startButton{
+  visibility: hidden;
+}
+
 #gameStatusLargeCircle{
   position: absolute;
   top: 0px;
@@ -23,6 +37,22 @@
   margin-left: 15px;
   margin-top: 15px;
   visibility: hidden;
+}
+
+#largeResetDiv{
+  width: 170px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 50px;
+}
+
+#resetButtonLarge{
+  visibility: hidden;
+  background-color: transparent;
+  color: #f8f8ff;
+  border: none;
+  font-size: 30px;
+  text-align: center;
 }
 
 #gameStatusLarge{
@@ -187,6 +217,12 @@ footer p{
     margin-top: 10px;
   }
 
+  #largeResetDiv{
+    width: 140px;
+    position: absolute;
+    bottom: 46px;
+  }
+
   #gameStatusLarge{
     background-color: transparent;
     visibility: hidden;
@@ -241,14 +277,40 @@ footer p{
     margin-left: 5px;
     margin-top: 5px;
   }
+
+  #largeResetDiv{
+    width: 90px;
+    position: absolute;
+    bottom: 30px;
+  }
   
   #gameStatusLarge{
     margin-top: 25px;
     width: 90px;
   }
+  #resetButtonLarge{
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 540px) {
+  #resetButton{
+    visibility: visible;
+  }
+
+  #largeResetDiv{
+    background-color: none;
+    visibility: hidden;
+  }
+
+  #resetButtonLarge{
+    font-size: 0px;
+    visibility: hidden;
+  }
+
+  #startButton{
+    visibility: visible;
+  }
   #gameStatusLarge{
     font-size: 0px;
   }
@@ -296,5 +358,8 @@ footer p{
     height: 0px;
     border-radius: 0px;
     border-color: transparent;
+  }
+  #gameStatus{
+    color: #0d0d0d;
   }
 }

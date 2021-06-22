@@ -16,6 +16,12 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
+function resetLarge(){
+  reset();
+  startGame();
+  document.getElementById("resetButtonLarge").style.visibility = "hidden"; 
+}
+
 function gameSpeedOne(){
     gameSpeed = 1;
     document.getElementById("speedSlow").style.textDecoration 
@@ -354,6 +360,11 @@ function checker(){
         'rgb(' + 0 + ',' + 0 + ',' + 255 + ')';
         document.getElementById("yellow").style.backgroundColor = 
         'rgb(' + 255 + ',' + 255 + ',' + 0 + ')';
+        setTimeout(function(){
+          document.getElementById("gameStatusLarge").style.visibility = "hidden";
+          document.getElementById("resetButtonLarge").style.visibility = "visible";  
+        }, 2000);
+        
         break;
       } gameOn = 1;
     }

@@ -33,7 +33,10 @@
                   <button id = "largePlayButton" onclick = "startGame()">Play Simon!</button>
                   <div id = "gameStatusLargeCircle">
                       <div id = "gameStatusLarge">
-                          <p>SIMON'S TURN...</p>
+                          <p>Thinking...</p>
+                      </div>
+                      <div id = "largeResetDiv">
+                          <button id = "resetButtonLarge" onclick = "resetLarge()">Try Again?</button>
                       </div>
                   </div>
               </div>
@@ -43,7 +46,7 @@
               onclick = "clickBlue()" class = "rightgame" id = "blue"></div>
           </div>
           <div>
-              <p id = "gameStatus">SIMON'S TURN...</p>
+              <p id = "gameStatus">Thinking...</p>
           </div>
               <div class = "scorehalf">
                   <p>CURRENT SCORE: <span id="currentscore"></span></p>
