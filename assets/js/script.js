@@ -113,6 +113,7 @@ function turn(){
   able to click the colours as they appear. animationCursor is also deactivated*/
   gameOn = 0;
   document.getElementById("gameStatus").innerHTML = "SIMONS TURN...";
+  document.getElementById("gameStatusLarge").innerHTML = "SIMONS TURN...";
   animationCursor = 0;
   delay = 1000;
   //resets colors to prevent animation errors//
@@ -217,6 +218,7 @@ with all animations happening instantaneously.*/
         setTimeout(function(){
           reanimate();
           document.getElementById("gameStatus").innerHTML = "PLAYERS TURN";
+          document.getElementById("gameStatusLarge").innerHTML = "PLAYERS TURN";
           gameOn = 1;
         }, delay + lightUpDelayOffset); /*This part of the code is dedicated to insuring 
         the mouse cursors hovering animation begins to function a set time 
@@ -322,6 +324,8 @@ function startGame(){
   document.getElementById("currentscore").innerHTML = 0;
   document.getElementById("gameStatus").style.visibility = "visible";
   document.getElementById("startButton").style.visibility = "hidden";
+  document.getElementById("largePlayButton").style.visibility = "hidden";
+  document.getElementById("gameStatusLarge").style.visibility = "visible";
 }
 
 function checker(){
@@ -338,6 +342,7 @@ function checker(){
         document.getElementById("currentscore").innerHTML = 0;
         gameOn = 0;
         document.getElementById("gameStatus").innerHTML = "GAME OVER";
+        document.getElementById("gameStatusLarge").innerHTML = "GAME OVER";
         document.getElementById("startButton").style.visibility = "visible";
         document.getElementById("startButton").innerHTML = "Play Again";
         document.getElementById("red").style.backgroundColor = 

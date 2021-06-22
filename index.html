@@ -31,6 +31,9 @@
               onclick = "clickRed()" class = "rightgame" id = "red"></div>
               <div id = "centerCircle">
                   <button id = "largePlayButton" onclick = "startGame()">Play Simon!</button>
+                  <div id = "gameStatusLarge">
+                      <p>SIMON'S TURN...</p>
+                  </div>
               </div>
               <div onmouseover = "yellowLightHover()" onmouseleave = "yellowLightLeave()"
               onclick = "clickYellow()" class = "leftgame" id = "yellow"></div>
@@ -38,7 +41,7 @@
               onclick = "clickBlue()" class = "rightgame" id = "blue"></div>
           </div>
           <div>
-              <p id = "gameStatus">SIMONS TURN...</p>
+              <p id = "gameStatus">SIMON'S TURN...</p>
           </div>
               <div class = "scorehalf">
                   <p>CURRENT SCORE: <span id="currentscore"></span></p>
