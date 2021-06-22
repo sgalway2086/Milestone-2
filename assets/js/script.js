@@ -338,6 +338,11 @@ function startGame(){
 }
 
 function checker(){
+  /*The below if and else are to add the ability for the code
+  to stop the game if the player selects wrong in the middle of
+  a turn. This removes the need to click randomly a few times
+  just to restart the game and also creates a smoother gameplay
+  experience*/
   if(array[scoreTurnChecker] == userArray[scoreTurnChecker]){
     scoreTurnChecker = scoreTurnChecker + 1;
   }
@@ -395,7 +400,7 @@ function checker(){
         
         break;
       } gameOn = 1;
-    }
+    } //The check below is to prevent premature activation if player loses//
     if(array.length > 0){
       if(gameOn == 1){
       array.push(Math.floor(Math.random()*4));
