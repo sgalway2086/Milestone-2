@@ -44,7 +44,7 @@
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   bottom: 60px;
-  left: 5px;
+  left: 17px;
 }
 
 #resetButtonLarge{
@@ -222,6 +222,7 @@ footer p{
     width: 140px;
     position: absolute;
     bottom: 46px;
+    left: 5px;
   }
 
   #gameStatusLarge{
@@ -283,6 +284,7 @@ footer p{
     width: 90px;
     position: absolute;
     bottom: 30px;
+    left: 0px;
   }
   
   #gameStatusLarge{
