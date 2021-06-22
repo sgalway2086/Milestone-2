@@ -48,6 +48,18 @@
   z-index: 2;
 }
 
+#largePlayButton{
+  width: 170px;
+  height: 170px;
+  border-radius: 85px;
+  border-color: white;
+  background-color: transparent;
+  font-size: 30px;
+  color: white;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
 #green{
   background-color: rgb(0 255 0);
   border-top-left-radius: 250px;
@@ -130,6 +142,14 @@ footer p{
     top: 130px;
     left: 130px;
   }
+
+  #largePlayButton{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 740px) {
@@ -160,6 +180,15 @@ footer p{
     position: absolute;
     top: 116px;
     left: 116px;
+  }
+
+  #largePlayButton{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 20px;
   }
 }
 
@@ -197,6 +226,9 @@ footer p{
   margin: auto;
   }
   #centerCircle{
+      visibility: hidden;
+  }
+  #largePlayButton{
       visibility: hidden;
   }
 }
