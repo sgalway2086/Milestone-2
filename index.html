@@ -28,9 +28,11 @@
                 <button class = "speedButton" id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
                 <button class = "speedButton" id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
                 <button class = "speedButton" id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
-                <button id = "soundactivate" onclick= "soundOnOff()">
-                  <i id = "volUp" class="fas fa-volume-up"></i>
-                  <i id = "volDown" class="fas fa-volume-mute"></i>
+                <button id = "soundactivate" onclick= "soundOff()">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+                <button id = "sounddeactivate" onclick= "soundOn()">
+                  <i class="fas fa-volume-mute"></i>
                 </button>
               </div>
               <div onmouseover = "greenLightHover()" onmouseleave = "greenLightLeave()"

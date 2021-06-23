@@ -12,12 +12,21 @@
   margin: auto;
 }
 
-#volDown{
+#sounddeactivate{
   visibility: hidden;
+  float: right;
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  border: none;
 }
 
 #soundactivate{
   float: right;
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  border: none;
 }
 
 #speedDiv{

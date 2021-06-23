@@ -18,17 +18,16 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
-function soundOnOff(){
-  if(soundActivation == 0){
-    soundActivation = 1; 
-    document.getElementById("volUp").style.visibility = "visible";
-    document.getElementById("volDown").style.visibility = "hidden";
-  }
-  else{
-    soundActivation = 0;
-    document.getElementById("volUp").style.visibility = "hidden";
-    document.getElementById("volDown").style.visibility = "visible";
-  }
+function soundOn(){
+  soundActivation = 1;
+  document.getElementById("soundactivate").style.visibility = "visible";
+  document.getElementById("sounddeactivate").style.visibility = "hidden";
+}
+
+function soundOff(){
+  soundActivation = 1;
+  document.getElementById("soundactivate").style.visibility = "hidden";
+  document.getElementById("sounddeactivate").style.visibility = "visible";
 }
 
 function colourDefault(){
