@@ -64,13 +64,6 @@ function yellowLit(){
   `rgb(${255}, ${255}, ${90})`
 }
 
-
-
-
-
-
-
-
 function resetLarge(){
   reset();
   startGame();

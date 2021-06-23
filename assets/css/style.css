@@ -7,7 +7,12 @@
   color: #0d0d0d;
 }
 
-
+#speedDiv{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 24px;
+}
 
 #resetButton{
   visibility: hidden;
@@ -19,6 +24,8 @@
 
 #startButton{
   visibility: hidden;
+  color: #f8f8ff;
+  border: none;
 }
 
 #gameStatusLargeCircle{
@@ -94,6 +101,7 @@
   height: auto;
   margin: auto;
   position: relative;
+  padding-top: 24px;
 }
 
 #centerCircle{
@@ -101,7 +109,7 @@
   height: 200px;
   border-radius: 100px;
   position: absolute;
-  top: 170px;
+  top: 194px;
   left: 170px;
   background-color: #0d0d0d;
   z-index: 2;
@@ -198,7 +206,7 @@ footer p{
     height: 160px;
     border-radius: 80px;
     position: absolute;
-    top: 130px;
+    top: 154px;
     left: 130px;
   }
 
@@ -258,7 +266,7 @@ footer p{
     height: 100px;
     border-radius: 50px;
     position: absolute;
-    top: 116px;
+    top: 140px;
     left: 116px;
   }
 
@@ -313,6 +321,8 @@ footer p{
 
   #startButton{
     visibility: visible;
+    color: #0d0d0d;
+    border: 2px solid #0d0d0d;
   }
   #gameStatusLarge{
     font-size: 0px;
