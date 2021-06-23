@@ -7,6 +7,14 @@
   color: #0d0d0d;
 }
 
+#volDown{
+  visibility: hidden;
+}
+
+#soundactivate{
+  float: right;
+}
+
 #speedDiv{
   position: absolute;
   top: 0px;

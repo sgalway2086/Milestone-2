@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <title></title>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+    crossorigin="anonymous"/>
   </head>
   <body>
       <header>
@@ -19,15 +22,16 @@
       <section id = "game">
           <button id = "startButton" onclick = "startGame()">Play Simon!</button>
           <button id = "resetButton" onclick = "reset()">Reset</button>
-          
-          
-
           <div id = "gamewrap">
               <div id = "speedDiv">
                 <span>Speed:</span>
                 <button class = "speedButton" id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
                 <button class = "speedButton" id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
                 <button class = "speedButton" id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
+                <button id = "soundactivate" onclick= "soundOnOff()">
+                  <i id = "volUp" class="fas fa-volume-up"></i>
+                  <i id = "volDown" class="fas fa-volume-mute"></i>
+                </button>
               </div>
               <div onmouseover = "greenLightHover()" onmouseleave = "greenLightLeave()"
               onclick = "clickGreen()" class = "leftgame" id = "green"></div>

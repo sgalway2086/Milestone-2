@@ -12,10 +12,24 @@ let speedIncrease = 1000;
 let lightUpDelay = 250;
 let lightUpDelayOffset = 500;
 let scoreTurnChecker = 0;
+let soundActivation = 1;
 const beep1 = new Audio('../assets/audio/beep1.mp3');
 const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
+
+function soundOnOff(){
+  if(soundActivation == 0){
+    soundActivation = 1; 
+    document.getElementById("volUp").style.visibility = "visible";
+    document.getElementById("volDown").style.visibility = "hidden";
+  }
+  else{
+    soundActivation = 0;
+    document.getElementById("volUp").style.visibility = "hidden";
+    document.getElementById("volDown").style.visibility = "visible";
+  }
+}
 
 function colourDefault(){
   redDefault();
@@ -201,7 +215,9 @@ with all animations happening instantaneously.*/
           greenLit();
         }, lightUpDelay);
         setTimeout(function(){
-          beep1.play()
+          if(soundActivation == 1){
+            beep1.play()
+          }
         }, lightUpDelay);
         setTimeout(function(){
           greenDefault();
@@ -213,7 +229,9 @@ with all animations happening instantaneously.*/
             redLit();
           }, lightUpDelay);
           setTimeout(function(){
-          beep2.play()
+            if(soundActivation == 1){
+              beep2.play()
+            }
           }, lightUpDelay);
           setTimeout(function(){
             redDefault();
@@ -225,7 +243,9 @@ with all animations happening instantaneously.*/
               blueLit();
             }, lightUpDelay);
             setTimeout(function(){
-              beep3.play()
+              if(soundActivation == 1){
+                beep3.play()
+              }
             }, lightUpDelay);
             setTimeout(function(){ 
               blueDefault();
@@ -236,7 +256,9 @@ with all animations happening instantaneously.*/
               yellowLit();
             }, lightUpDelay);
             setTimeout(function(){
-              beep4.play()
+              if(soundActivation == 1){
+                beep4.play()
+              }
             }, lightUpDelay);
             setTimeout(function(){
               yellowDefault();
@@ -266,7 +288,9 @@ function clickGreen(){
     setTimeout(function(){
       greenDefault();
     }, 25);
-    beep1.play()
+    if(soundActivation == 1){
+      beep1.play()
+    }
     setTimeout(function(){
       greenLightHover();
     }, 50);
@@ -281,7 +305,9 @@ function clickRed(){
     setTimeout(function(){
       redDefault();
     }, 25);
-    beep2.play()
+    if(soundActivation == 1){
+      beep2.play()
+    }
     setTimeout(function(){
       redLightHover();
     }, 50);
@@ -296,7 +322,9 @@ function clickBlue(){
     setTimeout(function(){
       blueDefault();
     }, 25);
-    beep3.play()
+    if(soundActivation == 1){
+      beep3.play()
+    }
     setTimeout(function(){
       blueLightHover();
     }, 50);
@@ -311,7 +339,9 @@ function clickYellow(){
     setTimeout(function(){
       yellowDefault();
     }, 25);
-    beep4.play()
+    if(soundActivation == 1){
+      beep4.play()
+    }
     setTimeout(function(){
       yellowLightHover();
     }, 50);
