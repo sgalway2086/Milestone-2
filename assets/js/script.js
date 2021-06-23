@@ -40,42 +40,42 @@ function colourDefault(){
 
 function redDefault(){
   document.getElementById("red").style.backgroundColor = 
-  `rgb(${255}, ${0}, ${0})`
+  `rgb(${204}, ${0}, ${0})`
 }
 
 function redLit(){
   document.getElementById("red").style.backgroundColor = 
-  `rgb(${255}, ${90}, ${90})`
+  `rgb(${255}, ${128}, ${128})`
 }
 
 function blueDefault(){
   document.getElementById("blue").style.backgroundColor = 
-  `rgb(${0}, ${0}, ${255})`
+  `rgb(${0}, ${0}, ${204})`
 }
 
 function blueLit(){
   document.getElementById("blue").style.backgroundColor = 
-  `rgb(${90}, ${90}, ${255})`
+  `rgb(${128}, ${128}, ${255})`
 }
 
 function greenDefault(){
   document.getElementById("green").style.backgroundColor = 
-  `rgb(${0}, ${255}, ${0})`
+  `rgb(${0}, ${204}, ${0})`
 }
 
 function greenLit(){
   document.getElementById("green").style.backgroundColor = 
-  `rgb(${90}, ${255}, ${90})`
+  `rgb(${128}, ${255}, ${128})`
 }
 
 function yellowDefault(){
   document.getElementById("yellow").style.backgroundColor = 
-  `rgb(${255}, ${255}, ${0})`
+  `rgb(${204}, ${204}, ${0})`
 }
 
 function yellowLit(){
   document.getElementById("yellow").style.backgroundColor = 
-  `rgb(${255}, ${255}, ${90})`
+  `rgb(${255}, ${255}, ${128})`
 }
 
 function resetLarge(){
