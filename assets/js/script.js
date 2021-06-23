@@ -25,7 +25,7 @@ function soundOn(){
 }
 
 function soundOff(){
-  soundActivation = 1;
+  soundActivation = 0;
   document.getElementById("soundactivate").style.visibility = "hidden";
   document.getElementById("sounddeactivate").style.visibility = "visible";
 }
