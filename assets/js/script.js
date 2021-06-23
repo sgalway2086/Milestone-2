@@ -81,7 +81,7 @@ function yellowLit(){
 function resetLarge(){
   reset();
   startGame();
-  document.getElementById("resetButtonLarge").style.visibility = "hidden"; 
+  document.getElementById("resetButtonLarge").style.visibility = "hidden";
 }
 
 function gameSpeedOne(){
@@ -288,7 +288,7 @@ function clickGreen(){
     setTimeout(function(){
       greenDefault();
     }, 25);
-    if(soundActivation == 1){
+    if(soundActivation == 1 && animationCursor == 1){
       beep1.play()
     }
     setTimeout(function(){
@@ -305,7 +305,7 @@ function clickRed(){
     setTimeout(function(){
       redDefault();
     }, 25);
-    if(soundActivation == 1){
+    if(soundActivation == 1 && animationCursor == 1){
       beep2.play()
     }
     setTimeout(function(){
@@ -322,7 +322,7 @@ function clickBlue(){
     setTimeout(function(){
       blueDefault();
     }, 25);
-    if(soundActivation == 1){
+    if(soundActivation == 1 && animationCursor == 1){
       beep3.play()
     }
     setTimeout(function(){
@@ -339,7 +339,7 @@ function clickYellow(){
     setTimeout(function(){
       yellowDefault();
     }, 25);
-    if(soundActivation == 1){
+    if(soundActivation == 1 && animationCursor == 1){
       beep4.play()
     }
     setTimeout(function(){
