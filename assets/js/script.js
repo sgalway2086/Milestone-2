@@ -366,6 +366,7 @@ function reset(){
     document.getElementById("startButton").innerHTML = "Play Simon!";
     document.getElementById("largePlayButton").style.visibility = "visible";
     document.getElementById("gameStatusLargeCircle").style.visibility = "hidden";
+    document.getElementById("mobileGameOver").style.visibility = "hidden";
     colourDefault();
   }
 }
@@ -384,6 +385,7 @@ function startGame(){
   document.getElementById("largePlayButton").style.visibility = "hidden";
   document.getElementById("gameStatusLarge").style.visibility = "visible";
   document.getElementById("gameStatusLargeCircle").style.visibility = "visible";
+  document.getElementById("mobileGameOver").style.visibility = "hidden";
 }
 
 function checker(){
@@ -405,7 +407,7 @@ function checker(){
     document.getElementById("gameStatusLarge").innerHTML = "Game Over";
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Again";
-    document.getElementById("red").style.backgroundColor = 
+    document.getElementById("mobileGameOver").style.visibility = "visible";
     colourDefault();
     setTimeout(function(){
       document.getElementById("gameStatusLarge").style.visibility = "hidden";
@@ -433,6 +435,7 @@ function checker(){
           document.getElementById("gameStatusLarge").style.visibility = "hidden";
           document.getElementById("resetButtonLarge").style.visibility = "visible";  
         }, 2000);
+        document.getElementById("mobileGameOver").style.visibility = "visible";
         
         break;
       } gameOn = 1;
