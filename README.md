@@ -40,3 +40,11 @@ at all times.
 ## Index Page
 
 ![Desktop Index Page](/documentation/wireframes/desktopwireframe.png "Desktop Index Page")
+
+## Index Page Mobile
+
+![Mobile Index Page](/documentation/wireframes/mobilewireframe.png "Mobile Index Page")
+
+## Game Over Mobile
+
+![Mobile Game Over](/documentation/wireframes/gameovermobilewireframe.png "Mobile Game Over")
