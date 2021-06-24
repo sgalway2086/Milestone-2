@@ -403,7 +403,7 @@ function checker(){
     scoreTurnChecker = 0;
     document.getElementById("currentscore").innerHTML = 0;
     gameOn = 0;
-    document.getElementById("gameStatus").innerHTML = "GAME OVER";
+    document.getElementById("gameStatus").style.visibility = "hidden";
     document.getElementById("gameStatusLarge").innerHTML = "Game Over";
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Again";
