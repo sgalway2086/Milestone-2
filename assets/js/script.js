@@ -365,6 +365,7 @@ function reset(){
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Simon!";
     document.getElementById("largePlayButton").style.visibility = "visible";
+    document.getElementById("gameStatusLargeCircle").style.visibility = "hidden";
     colourDefault();
   }
 }
