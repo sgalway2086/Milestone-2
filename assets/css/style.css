@@ -356,12 +356,27 @@ footer p{
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 540px){
+  #speedDiv{
+    padding: 0% 1%;
+    width: 98%;
+  }
 
   #startcontainer{
-      width: 100%;
-      margin: auto;
+    padding: 0% 1%;
+    width: 98%;
+    text-align: center;
   }
+
+  #startcontainer p{
+    position: absolute;
+  }
+
+  #startcontainer button{
+    position: absolute;
+    margin: auto;
+  }
+
   #largePlayButton{
     height: 0px;
     width: 0px;
@@ -370,11 +385,8 @@ footer p{
     color: transparent;
     font-size: 0px;
   }
-  #scorecontainer{
-    width: 100%;
-  }
 
-  #speedDiv{
+  #scorecontainer{
     width: 100%;
   }
 
@@ -400,27 +412,34 @@ footer p{
     width: 100px;
     margin: auto;
   }
+
   #gameStatusLarge{
     font-size: 0px;
   }
+
   #green{
     border-top-left-radius: 0px;
   }
+
   #red{
     border-top-right-radius: 0px;
   }
+
   #yellow{
     border-bottom-left-radius: 0px;
   }
+
   #blue{
     border-bottom-right-radius: 0px;
   }
+
   .leftgame{
     width: 48%;
     height: 35vh;
     margin: 1%;
     border: none;
   }
+
   .rightgame{
     width: 48%;
     height: 35vh;
@@ -428,19 +447,24 @@ footer p{
     border: none;
     float: left;
   }
+
   #gamewrap{
     width: 100%;
   }
+
   #game{
   width: 100%;
   margin: auto;
   }
+
   #centerCircle{
       visibility: hidden;
   }
+
   #largePlayButton{
       visibility: hidden;
   }
+
   #gameStatusLargeCircle{
     visibility: hidden;
     width: 0px;
@@ -448,7 +472,9 @@ footer p{
     border-radius: 0px;
     border-color: transparent;
   }
+
   #gameStatus{
     color: #0d0d0d;
+    text-align: center;
   }
 }
