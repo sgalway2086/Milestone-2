@@ -18,6 +18,66 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
+function speedChangeHoverInOne(){
+  document.getElementsByClassName("speedButton")[0].style.textDecoration = "underline";
+}
+
+function speedChangeHoverOutOne(){
+  if(gameSpeed != 1){
+    document.getElementsByClassName("speedButton")[0].style.textDecoration = "none";
+  }
+}
+
+function speedChangeHoverInTwo(){
+  document.getElementsByClassName("speedButton")[1].style.textDecoration = "underline";
+} 
+
+function speedChangeHoverOutTwo(){
+  if(gameSpeed != 2){
+    document.getElementsByClassName("speedButton")[1].style.textDecoration = "none";
+  }
+}
+
+function speedChangeHoverInThree(){
+  document.getElementsByClassName("speedButton")[2].style.textDecoration = "underline";
+} 
+
+function speedChangeHoverOutThree(){
+  if(gameSpeed != 3){
+    document.getElementsByClassName("speedButton")[2].style.textDecoration = "none";
+  }
+}
+
+function refreshHoverLightIn(){
+  document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+  `rgb(${204}, ${0}, ${0})`;
+}
+
+function refreshHoverLightOut(){
+  document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+  `rgb(${13}, ${13}, ${13})`;
+}
+
+function volUpHoverLightIn(){
+  document.getElementsByClassName("fas fa-volume-up")[0].style.color = 
+  `rgb(${204}, ${0}, ${0})`;
+}
+
+function volUpHoverLightOut(){
+  document.getElementsByClassName("fas fa-volume-up")[0].style.color = 
+  `rgb(${13}, ${13}, ${13})`;
+}
+
+function volDownHoverLightIn(){
+  document.getElementsByClassName("fas fa-volume-mute")[0].style.color = 
+  `rgb(${204}, ${0}, ${0})`;
+}
+
+function volDownHoverLightOut(){
+  document.getElementsByClassName("fas fa-volume-mute")[0].style.color = 
+  `rgb(${13}, ${13}, ${13})`;
+}
+
 function largeScreenCheck(){
   largeScreen = 1;
 }

@@ -365,7 +365,8 @@ footer p{
 @media screen and (max-width: 540px){
   #mobileGameOver{
     background-color: rgba(15, 14, 14, 0.808);
-    height: 73vh;
+    height: 72vh;
+    margin-top: 1vh;
     z-index: 2;
     width: 100vw;
     position: absolute;

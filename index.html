@@ -23,16 +23,22 @@
           <div id = "gamewrap">
               <div id = "speedDiv">
                 <span>Speed:</span>
-                <button class = "speedButton" id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
-                <button class = "speedButton" id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
-                <button class = "speedButton" id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
-                <button id = "refresh" onclick = "reset()">
+                <button onmouseover = "speedChangeHoverInOne()" onmouseleave = "speedChangeHoverOutOne()" 
+                class = "speedButton" id = "speedSlow" onclick = "gameSpeedOne()">Slow</button>
+                <button onmouseover = "speedChangeHoverInTwo()" onmouseleave = "speedChangeHoverOutTwo()" 
+                class = "speedButton" id = "speedMedium" onclick = "gameSpeedTwo()">Medium</button>
+                <button onmouseover = "speedChangeHoverInThree()" onmouseleave = "speedChangeHoverOutThree()" 
+                class = "speedButton" id = "speedFast" onclick = "gameSpeedThree()">Fast</button>
+                <button onmouseover = "refreshHoverLightIn()" onmouseleave = "refreshHoverLightOut()" 
+                id = "refresh" onclick = "reset()">
                   <i class="fas fa-sync-alt"></i>
                 </button>
-                <button id = "soundactivate" onclick= "soundOff()">
+                <button onmouseover = "volUpHoverLightIn()" onmouseleave = "volUpHoverLightOut()" 
+                id = "soundactivate" onclick= "soundOff()">
                   <i class="fas fa-volume-up"></i>
                 </button>
-                <button id = "sounddeactivate" onclick= "soundOn()">
+                <button onmouseover = "volDownHoverLightIn()" onmouseleave = "volDownHoverLightOut()" 
+                id = "sounddeactivate" onclick= "soundOn()">
                   <i class="fas fa-volume-mute"></i>
                 </button>
               </div>
