@@ -48,3 +48,30 @@ at all times.
 ## Game Over Mobile
 
 ![Mobile Game Over](/documentation/wireframes/gameovermobilewireframe.png "Mobile Game Over")
+
+
+# Technology Used
+
+## Google Fonts
+
+* Google Fonts "Oswald" font was used for this project
+
+## FontAwesome
+
+* Varius FontAwesome logos were utilised to create a more clean user interface
+
+## Gitpod
+
+* The version control on Gitpod was used to create commits and version control the project
+
+## Github
+
+* Github was used to store all versions commited from Gitpod
+
+## Github Pages
+
+* Github Pages was used to make the project live
+
+## Balsamiq
+
+* Balsamiq was used to create various wireframes of different sizes of the site
