@@ -18,6 +18,10 @@ const beep2 = new Audio('../assets/audio/beep2.mp3');
 const beep3 = new Audio('../assets/audio/beep3.mp3');
 const beep4 = new Audio('../assets/audio/beep4.mp3');
 
+function largeScreenCheck(){
+  largeScreen = 1;
+}
+
 function soundOn(){
   soundActivation = 1;
   document.getElementById("soundactivate").style.visibility = "visible";
@@ -357,8 +361,10 @@ function reset(){
     document.getElementById("currentscore").innerHTML = 0;
     gameOn = 0;
     document.getElementById("gameStatus").style.visibility = "hidden";
+    document.getElementById("gameStatusLarge").style.visibility = "hidden";
     document.getElementById("startButton").style.visibility = "visible";
     document.getElementById("startButton").innerHTML = "Play Simon!";
+    document.getElementById("largePlayButton").style.visibility = "visible";
     colourDefault();
   }
 }

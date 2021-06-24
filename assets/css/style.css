@@ -9,7 +9,7 @@
 
 #refresh{
   float: right;
-  margin-right: 40px;
+  margin-right: 30px;
   border: none;
   font-size: 16px;
 }
@@ -357,6 +357,14 @@ footer p{
 }
 
 @media screen and (max-width: 540px) {
+  #largePlayButton{
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    border: none;
+    color: transparent;
+    font-size: 0px;
+  }
   #scorecontainer{
     width: 100%;
   }
