@@ -49,6 +49,11 @@ at all times.
 
 ![Mobile Game Over](/documentation/wireframes/gameovermobilewireframe.png "Mobile Game Over")
 
+# Features
+
+* Use of media queries to resize the screen correctly
+* Many options, such as sound and speed, for replayability
+* Good tactile feedback for the user as they play the game
 
 # Technology Used
 
@@ -69,3 +74,4 @@ at all times.
 
 ## Balsamiq
 * Balsamiq was used to create various wireframes of different sizes of the site
+
