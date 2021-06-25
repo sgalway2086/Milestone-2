@@ -75,6 +75,9 @@ at all times.
 ## Balsamiq
 * Balsamiq was used to create various wireframes of different sizes of the site
 
+## Favicon.cc
+* This site was used to make the favicon
+
 # Testing
 
 ## HTML Validation
