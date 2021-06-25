@@ -140,6 +140,7 @@
   margin: auto;
   position: relative;
   padding-top: 24px;
+  overflow: hidden;
 }
 
 #centerCircle{
@@ -392,6 +393,7 @@ footer p{
     padding: 0% 1%;
     width: 98%;
     text-align: center;
+    height: 30px;
   }
 
   #startcontainer p{
