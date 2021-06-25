@@ -14,10 +14,10 @@ let lightUpDelay = 250;
 let lightUpDelayOffset = 500;
 let scoreTurnChecker = 0;
 let soundActivation = 1;
-const beep1 = new Audio('../../assets/audio/beep1.mp3');
-const beep2 = new Audio('../../assets/audio/beep2.mp3');
-const beep3 = new Audio('../../assets/audio/beep3.mp3');
-const beep4 = new Audio('../../assets/audio/beep4.mp3');
+const beep1 = new Audio('assets/audio/beep1.mp3');
+const beep2 = new Audio('assets/audio/beep2.mp3');
+const beep3 = new Audio('assets/audio/beep3.mp3');
+const beep4 = new Audio('assets/audio/beep4.mp3');
 
 function speedChangeHoverInOne() {
     document.getElementsByClassName("speedButton")[0].style.textDecoration = "underline";
