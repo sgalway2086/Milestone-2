@@ -49,14 +49,14 @@ function speedChangeHoverOutThree(){
 }
 
 function refreshHoverLightIn(){
-  if(animationCursor == 1){
+  if(animationCursor == 1 && gameOn == 1){
     document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
     `rgb(${204}, ${0}, ${0})`;
   }
 }
 
 function refreshHoverLightOut(){
-  if(animationCursor == 1){
+  if(animationCursor == 1 && gameOn == 1){
     document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
     `rgb(${13}, ${13}, ${13})`;
   }
@@ -435,6 +435,9 @@ function reset(){
     document.getElementById("largePlayButton").style.visibility = "visible";
     document.getElementById("gameStatusLargeCircle").style.visibility = "hidden";
     document.getElementById("mobileGameOver").style.visibility = "hidden";
+    document.getElementById("resetButtonLarge").style.color = "transparent";
+    document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+    `rgb(${128}, ${128}, ${128})`;
     colourDefault();
   }
 }
@@ -445,6 +448,8 @@ mouse hovering over each section is also disabled here, as it could be
 intrusive towards the playing experience and prove confusing.*/
 function startGame(){
   animationCursor = 0;
+  document.getElementById("resetButtonLarge").style.color = 
+  `rgb(${248}, ${248}, ${255})`;
   array.push(Math.floor(Math.random() * 4));
   turn();
   document.getElementById("currentscore").innerHTML = 0;
@@ -478,9 +483,11 @@ function checker(){
     document.getElementById("mobileGameOver").style.visibility = "visible";
     colourDefault();
     setTimeout(function(){
-      document.getElementById("gameStatusLarge").style.visibility = "hidden";
-      document.getElementById("resetButtonLarge").style.visibility = "visible";  
+    document.getElementById("gameStatusLarge").style.visibility = "hidden";
+    document.getElementById("resetButtonLarge").style.visibility = "visible";   
     }, 2000);
+    
+    
   }
   if(userArray.length == array.length){
     gameOn = 0;
