@@ -436,7 +436,8 @@ footer p{
     border: 2px solid #0d0d0d;
     height: 26px;
     width: 100px;
-    margin: auto;
+    margin-right: -21px;
+    margin-left: 21px;
   }
 
   #gameStatusLarge{
