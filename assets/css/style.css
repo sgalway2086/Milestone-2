@@ -1,509 +1,433 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
-
-*{
-  margin: 0px;
-  background-color: #f8f8ff;
-  font-family: 'Oswald', sans-serif;
-  color: #0d0d0d;
+ *{
+     margin: 0px;
+     background-color: #f8f8ff;
+     font-family: 'Oswald', sans-serif;
+     color: #0d0d0d;
 }
-
-#mobileGameOver{
-  visibility: hidden;
-  height: 0px;
-  font-size: 0%;
+ #mobileGameOver{
+     visibility: hidden;
+     height: 0px;
+     font-size: 0%;
 }
-
-#refresh{
-  float: right;
-  margin-right: 30px;
-  border: none;
-  font-size: 16px;
+ #refresh{
+     float: right;
+     margin-right: 30px;
+     border: none;
+     font-size: 16px;
 }
-
-#scorecontainer{
-  width: 540px;
-  margin: auto;
+ #scorecontainer{
+     width: 540px;
+     margin: auto;
 }
-
-#sounddeactivate{
-  visibility: hidden;
-  float: right;
-  position: absolute;
-  right: 0px;
-  font-size: 16px;
-  border: none;
+ #sounddeactivate{
+     visibility: hidden;
+     float: right;
+     position: absolute;
+     right: 0px;
+     font-size: 16px;
+     border: none;
 }
-
-#soundactivate{
-  float: right;
-  position: absolute;
-  right: 0px;
-  font-size: 16px;
-  border: none;
+ #soundactivate{
+     float: right;
+     position: absolute;
+     right: 0px;
+     font-size: 16px;
+     border: none;
 }
-
-#speedDiv{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 24px;
-  width: 540px;
+ #speedDiv{
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     height: 24px;
+     width: 540px;
 }
-
-#resetButton{
-  visibility: hidden;
+ #resetButton{
+     visibility: hidden;
 }
-
-#gameStatus{
-  color: #f8f8ff;
+ #gameStatus{
+     color: #f8f8ff;
 }
-
-#startButton{
-  visibility: hidden;
-  color: #f8f8ff;
-  border: none;
-  height: 0px;
-  width: 0px;
+ #startButton{
+     visibility: hidden;
+     color: #f8f8ff;
+     border: none;
+     height: 0px;
+     width: 0px;
 }
-
-#gameStatusLargeCircle{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 166px;
-  height: 166px;
-  border-radius: 83px;
-  background-color: transparent;
-  border-color: #f8f8ff;
-  border: solid 2px;
-  background-color: transparent;
-  font-size: 30px;
-  color: #f8f8ff;
-  margin-left: 15px;
-  margin-top: 15px;
-  visibility: hidden;
+ #gameStatusLargeCircle{
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     width: 166px;
+     height: 166px;
+     border-radius: 83px;
+     background-color: transparent;
+     border-color: #f8f8ff;
+     border: solid 2px;
+     background-color: transparent;
+     font-size: 30px;
+     color: #f8f8ff;
+     margin-left: 15px;
+     margin-top: 15px;
+     visibility: hidden;
 }
-
-#largeResetDiv{
-  width: 170px;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  bottom: 60px;
-  left: 17px;
+ #largeResetDiv{
+     width: 170px;
+     background-color: rgba(0, 0, 0, 0);
+     position: absolute;
+     bottom: 60px;
+     left: 17px;
 }
-
-#resetButtonLarge{
-  visibility: hidden;
-  background-color: transparent;
-  color: #f8f8ff;
-  border: none;
-  font-size: 30px;
-  text-align: center;
+ #resetButtonLarge{
+     visibility: hidden;
+     background-color: transparent;
+     color: #f8f8ff;
+     border: none;
+     font-size: 30px;
+     text-align: center;
 }
-
-#gameStatusLarge{
-  background-color: transparent;
-  visibility: hidden;
-  margin-top: 60px;
-  width: 170px;
-  text-align: center;
-  color: #f8f8ff;
+ #gameStatusLarge{
+     background-color: transparent;
+     visibility: hidden;
+     margin-top: 60px;
+     width: 170px;
+     text-align: center;
+     color: #f8f8ff;
 }
-
-#speedMedium{
-  text-decoration: underline;
+ #speedMedium{
+     text-decoration: underline;
 }
-
-.speedButton{
-  border: none;
-  background-color: transparent;
-  outline: none; 
+ .speedButton{
+     border: none;
+     background-color: transparent;
+     outline: none;
 }
-
-.leftgame{
-  width: 250px;
-  height: 250px;
-  float: left;
-  border: 10px solid #0d0d0d;
+ .leftgame{
+     width: 250px;
+     height: 250px;
+     float: left;
+     border: 10px solid #0d0d0d;
 }
-
-.rightgame{
-  width: 250px;
-  height: 250px;
-  float: right;
-  border:10px solid#0d0d0d;
+ .rightgame{
+     width: 250px;
+     height: 250px;
+     float: right;
+     border:10px solid#0d0d0d;
 }
-
-#gamewrap{
-  width: 540px;
-  height: auto;
-  margin: auto;
-  position: relative;
-  padding-top: 24px;
-  overflow: hidden;
+ #gamewrap{
+     width: 540px;
+     height: auto;
+     margin: auto;
+     position: relative;
+     padding-top: 24px;
+     overflow: hidden;
 }
-
-#centerCircle{
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  position: absolute;
-  top: 194px;
-  left: 170px;
-  background-color: #0d0d0d;
-  z-index: 2;
+ #centerCircle{
+     width: 200px;
+     height: 200px;
+     border-radius: 100px;
+     position: absolute;
+     top: 194px;
+     left: 170px;
+     background-color: #0d0d0d;
+     z-index: 2;
 }
-
-#largePlayButton{
-  width: 170px;
-  height: 170px;
-  border-radius: 85px;
-  border-color: white;
-  background-color: transparent;
-  font-size: 30px;
-  color: white;
-  margin-left: 15px;
-  margin-top: 15px;
+ #largePlayButton{
+     width: 170px;
+     height: 170px;
+     border-radius: 85px;
+     border-color: white;
+     background-color: transparent;
+     font-size: 30px;
+     color: white;
+     margin-left: 15px;
+     margin-top: 15px;
 }
-
-#green{
-  background-color: rgb(0 204 0);
-  border-top-left-radius: 250px;
+ #green{
+     background-color: rgb(0 204 0);
+     border-top-left-radius: 250px;
 }
-
-#red{
-  background-color: rgb(204 0 0);
-  border-top-right-radius: 250px;
+ #red{
+     background-color: rgb(204 0 0);
+     border-top-right-radius: 250px;
 }
-
-#yellow{
-  background-color: rgb(204 204 0);
-  border-bottom-left-radius: 250px;
+ #yellow{
+     background-color: rgb(204 204 0);
+     border-bottom-left-radius: 250px;
 }
-
-#blue{
-  background-color: rgb(0 0 204);
-  border-bottom-right-radius: 250px;
+ #blue{
+     background-color: rgb(0 0 204);
+     border-bottom-right-radius: 250px;
 }
-
-#game{
-  width: 60%;
-  margin: auto;
+ #game{
+     width: 60%;
+     margin: auto;
 }
-
-#gameStatus{
-  text-align: center;
-  visibility: hidden;
+ #gameStatus{
+     text-align: center;
+     visibility: hidden;
 }
-
-header h1{
-  color: #f8f8ff;
-  background-color: #922B21;
-  padding: 10px 0px 10px 10px;
+ header h1{
+     color: #f8f8ff;
+     background-color: #922B21;
+     padding: 10px 0px 10px 10px;
 }
-
-footer p{
-  color: #f8f8ff;
-  background-color: #922B21;
-  padding: 10px 0px 10px 10px;
+ footer p{
+     color: #f8f8ff;
+     background-color: #922B21;
+     padding: 10px 0px 10px 10px;
 }
-
-#description{
-  margin: 0px 1%;
-  font-weight: 300;
+ #description{
+     margin: 0px 1%;
+     font-weight: 300;
 }
-
-.scorehalf{
-  width: 49%;
-  padding: 0px 0px 0px 1%;
-  float:left;
+ .scorehalf{
+     width: 49%;
+     padding: 0px 0px 0px 1%;
+     float:left;
 }
-
-.scorehalf p{
-  text-align: center;
+ .scorehalf p{
+     text-align: center;
 }
-
-@media screen and (max-width: 920px) {
-  .leftgame{
-    width: 200px;
-    height: 200px;
-    float: left;
-    border: 5px solid #0d0d0d;
-  }
-
-  .rightgame{
-    width: 200px;
-    height: 200px;
-    float: right;
-    border: 5px solid #0d0d0d;
-  }
-  
-  #gamewrap{
-    width: 420px;
-    height: auto;
-    margin: auto;
-  }
-
-  #speedDiv{
-    width: 420px;
-  }
-
-  #centerCircle{
-    width: 160px;
-    height: 160px;
-    border-radius: 80px;
-    position: absolute;
-    top: 154px;
-    left: 130px;
-  }
-
-  #largePlayButton{
-    width: 140px;
-    height: 140px;
-    border-radius: 70px;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  #gameStatusLargeCircle{
-    width: 136px;
-    height: 136px;
-    border-radius: 68px;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  #largeResetDiv{
-    width: 140px;
-    position: absolute;
-    bottom: 46px;
-    left: 5px;
-  }
-
-  #gameStatusLarge{
-    background-color: transparent;
-    visibility: hidden;
-    margin-top: 45px;
-    width: 140px;
-  }
-
-  #scorecontainer{
-    width: 420px;
-  }
+ @media screen and (max-width: 920px) {
+     .leftgame{
+         width: 200px;
+         height: 200px;
+         float: left;
+         border: 5px solid #0d0d0d;
+    }
+     .rightgame{
+         width: 200px;
+         height: 200px;
+         float: right;
+         border: 5px solid #0d0d0d;
+    }
+     #gamewrap{
+         width: 420px;
+         height: auto;
+         margin: auto;
+    }
+     #speedDiv{
+         width: 420px;
+    }
+     #centerCircle{
+         width: 160px;
+         height: 160px;
+         border-radius: 80px;
+         position: absolute;
+         top: 154px;
+         left: 130px;
+    }
+     #largePlayButton{
+         width: 140px;
+         height: 140px;
+         border-radius: 70px;
+         margin-left: 10px;
+         margin-top: 10px;
+    }
+     #gameStatusLargeCircle{
+         width: 136px;
+         height: 136px;
+         border-radius: 68px;
+         margin-left: 10px;
+         margin-top: 10px;
+    }
+     #largeResetDiv{
+         width: 140px;
+         position: absolute;
+         bottom: 46px;
+         left: 5px;
+    }
+     #gameStatusLarge{
+         background-color: transparent;
+         visibility: hidden;
+         margin-top: 45px;
+         width: 140px;
+    }
+     #scorecontainer{
+         width: 420px;
+    }
 }
-@media screen and (max-width: 740px) {
-  .leftgame{
-    width: 160px;
-    height: 160px;
-    float: left;
-    border: 3px solid #0d0d0d;
-  }
-
-  .rightgame{
-    width: 160px;
-    height: 160px;
-    float: right;
-    border: 3px solid #0d0d0d;
-  }
-  
-  #gamewrap{
-    width: 332px;
-    height: auto;
-    margin: auto;
-  }
-
-  #speedDiv{
-    width: 332px;
-  }
-
-  #scorecontainer{
-    width: 332px;
-  }
-
-  #centerCircle{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    position: absolute;
-    top: 140px;
-    left: 116px;
-  }
-
-  #largePlayButton{
-    width: 90px;
-    height: 90px;
-    border-radius: 45px;
-    margin-left: 5px;
-    margin-top: 5px;
-    font-size: 20px;
-  }
-
-  #gameStatusLargeCircle{
-    width: 86px;
-    height: 86px;
-    border-radius: 45px;
-    font-size: 20px;
-    margin-left: 5px;
-    margin-top: 5px;
-  }
-
-  #largeResetDiv{
-    width: 90px;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-  }
-  
-  #gameStatusLarge{
-    margin-top: 25px;
-    width: 90px;
-  }
-  #resetButtonLarge{
-    font-size: 20px;
-  }
+ @media screen and (max-width: 740px) {
+     .leftgame{
+         width: 160px;
+         height: 160px;
+         float: left;
+         border: 3px solid #0d0d0d;
+    }
+     .rightgame{
+         width: 160px;
+         height: 160px;
+         float: right;
+         border: 3px solid #0d0d0d;
+    }
+     #gamewrap{
+         width: 332px;
+         height: auto;
+         margin: auto;
+    }
+     #speedDiv{
+         width: 332px;
+    }
+     #scorecontainer{
+         width: 332px;
+    }
+     #centerCircle{
+         width: 100px;
+         height: 100px;
+         border-radius: 50px;
+         position: absolute;
+         top: 140px;
+         left: 116px;
+    }
+     #largePlayButton{
+         width: 90px;
+         height: 90px;
+         border-radius: 45px;
+         margin-left: 5px;
+         margin-top: 5px;
+         font-size: 20px;
+    }
+     #gameStatusLargeCircle{
+         width: 86px;
+         height: 86px;
+         border-radius: 45px;
+         font-size: 20px;
+         margin-left: 5px;
+         margin-top: 5px;
+    }
+     #largeResetDiv{
+         width: 90px;
+         position: absolute;
+         bottom: 30px;
+         left: 0px;
+    }
+     #gameStatusLarge{
+         margin-top: 25px;
+         width: 90px;
+    }
+     #resetButtonLarge{
+         font-size: 20px;
+    }
 }
-
-@media screen and (max-width: 540px){
-  #mobileGameOver{
-    background-color: rgba(15, 14, 14, 0.808);
-    height: 72vh;
-    margin-top: 1vh;
-    z-index: 2;
-    width: 100vw;
-    position: absolute;
-    top: 24px;
-    left: 0px;
-    text-align: center;
-  }
-
-  #mobileGameOver span{
-    font-size: 26px;
-    background-color: transparent;
-    color: #f8f8ff;
-    text-shadow: 1px 1px #0d0d0d;
-    line-height: 73vh;
-    vertical-align: middle;
-  }
-  #speedDiv{
-    padding: 0% 1%;
-    width: 98%;
-  }
-
-  #startcontainer{
-    padding: 0% 1%;
-    width: 98%;
-    text-align: center;
-    height: 30px;
-  }
-
-  #startcontainer p{
-    position: absolute;
-  }
-
-  #startcontainer button{
-    position: absolute;
-    margin: auto;
-  }
-
-  #largePlayButton{
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
-    border: none;
-    color: transparent;
-    font-size: 0px;
-  }
-
-  #scorecontainer{
-    width: 100%;
-  }
-
-  #resetButton{
-    visibility: visible;
-  }
-
-  #largeResetDiv{
-    background-color: none;
-    visibility: hidden;
-  }
-
-  #resetButtonLarge{
-    font-size: 0px;
-    visibility: hidden;
-  }
-
-  #startButton{
-    visibility: visible;
-    color: #0d0d0d;
-    border: 2px solid #0d0d0d;
-    height: 26px;
-    width: 88px;
-    margin-right: -21px;
-    margin-left: 21px;
-  }
-
-  #gameStatusLarge{
-    font-size: 0px;
-  }
-
-  #green{
-    border-top-left-radius: 0px;
-  }
-
-  #red{
-    border-top-right-radius: 0px;
-  }
-
-  #yellow{
-    border-bottom-left-radius: 0px;
-  }
-
-  #blue{
-    border-bottom-right-radius: 0px;
-  }
-
-  .leftgame{
-    width: 48%;
-    height: 35vh;
-    margin: 1vh 1vw;
-    border: none;
-  }
-
-  .rightgame{
-    width: 48%;
-    height: 35vh;
-    margin: 1vh 0px 1vh 1vw;
-    border: none;
-    float: left;
-  }
-
-  #gamewrap{
-    width: 100%;
-  }
-
-  #game{
-  width: 100%;
-  margin: auto;
-  }
-
-  #centerCircle{
-      visibility: hidden;
-  }
-
-  #largePlayButton{
-      visibility: hidden;
-  }
-
-  #gameStatusLargeCircle{
-    visibility: hidden;
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
-    border-color: transparent;
-  }
-
-  #gameStatus{
-    color: #0d0d0d;
-    text-align: center;
-  }
+ @media screen and (max-width: 540px){
+     #mobileGameOver{
+         background-color: rgba(15, 14, 14, 0.808);
+         height: 72vh;
+         margin-top: 1vh;
+         z-index: 2;
+         width: 100vw;
+         position: absolute;
+         top: 24px;
+         left: 0px;
+         text-align: center;
+    }
+     #mobileGameOver span{
+         font-size: 26px;
+         background-color: transparent;
+         color: #f8f8ff;
+         text-shadow: 1px 1px #0d0d0d;
+         line-height: 73vh;
+         vertical-align: middle;
+    }
+     #speedDiv{
+         padding: 0% 1%;
+         width: 98%;
+    }
+     #startcontainer{
+         padding: 0% 1%;
+         width: 98%;
+         text-align: center;
+         height: 30px;
+    }
+     #startcontainer p{
+         position: absolute;
+    }
+     #startcontainer button{
+         position: absolute;
+         margin: auto;
+    }
+     #largePlayButton{
+         height: 0px;
+         width: 0px;
+         visibility: hidden;
+         border: none;
+         color: transparent;
+         font-size: 0px;
+    }
+     #scorecontainer{
+         width: 100%;
+    }
+     #resetButton{
+         visibility: visible;
+    }
+     #largeResetDiv{
+         visibility: hidden;
+    }
+     #resetButtonLarge{
+         font-size: 0px;
+         visibility: hidden;
+    }
+     #startButton{
+         visibility: visible;
+         color: #0d0d0d;
+         border: 2px solid #0d0d0d;
+         height: 26px;
+         width: 88px;
+         margin-right: -21px;
+         margin-left: 21px;
+    }
+     #gameStatusLarge{
+         font-size: 0px;
+    }
+     #green{
+         border-top-left-radius: 0px;
+    }
+     #red{
+         border-top-right-radius: 0px;
+    }
+     #yellow{
+         border-bottom-left-radius: 0px;
+    }
+     #blue{
+         border-bottom-right-radius: 0px;
+    }
+     .leftgame{
+         width: 48%;
+         height: 35vh;
+         margin: 1vh 1vw;
+         border: none;
+    }
+     .rightgame{
+         width: 48%;
+         height: 35vh;
+         margin: 1vh 0px 1vh 1vw;
+         border: none;
+         float: left;
+    }
+     #gamewrap{
+         width: 100%;
+    }
+     #game{
+         width: 100%;
+         margin: auto;
+    }
+     #centerCircle{
+         visibility: hidden;
+    }
+     #largePlayButton{
+         visibility: hidden;
+    }
+     #gameStatusLargeCircle{
+         visibility: hidden;
+         width: 0px;
+         height: 0px;
+         border-radius: 0px;
+         border-color: transparent;
+    }
+     #gameStatus{
+         color: #0d0d0d;
+         text-align: center;
+    }
 }
