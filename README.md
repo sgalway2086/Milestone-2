@@ -91,3 +91,7 @@ at all times.
 ## Javascript Validation
 
 ![Validated Javascript](/documentation/validation/JSValidated.PNG "Validated Javascript")
+
+## Lighthouse Report
+
+![Lighthouse Report Result](/documentation/validation/Lighthouse.PNG "Lighthouse Report Result")
