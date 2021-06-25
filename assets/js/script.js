@@ -49,13 +49,17 @@ function speedChangeHoverOutThree(){
 }
 
 function refreshHoverLightIn(){
-  document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
-  `rgb(${204}, ${0}, ${0})`;
+  if(animationCursor == 1){
+    document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+    `rgb(${204}, ${0}, ${0})`;
+  }
 }
 
 function refreshHoverLightOut(){
-  document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
-  `rgb(${13}, ${13}, ${13})`;
+  if(animationCursor == 1){
+    document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+    `rgb(${13}, ${13}, ${13})`;
+  }
 }
 
 function volUpHoverLightIn(){
@@ -234,6 +238,8 @@ function reanimate(){
 function turn(){
   /*gameOn is deactivated here to prevent the user from being 
   able to click the colours as they appear. animationCursor is also deactivated*/
+  document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+  `rgb(${128}, ${128}, ${128})`;
   gameOn = 0;
   scoreTurnChecker = 0;
   document.getElementById("gameStatus").innerHTML = "SIMONS TURN...";
@@ -336,6 +342,8 @@ with all animations happening instantaneously.*/
           reanimate();
           document.getElementById("gameStatus").innerHTML = "PLAYERS TURN";
           document.getElementById("gameStatusLarge").innerHTML = "GO!";
+          document.getElementsByClassName("fas fa-sync-alt")[0].style.color = 
+          `rgb(${13}, ${13}, ${13})`;
           gameOn = 1;
         }, delay + lightUpDelayOffset); /*This part of the code is dedicated to insuring 
         the mouse cursors hovering animation begins to function a set time 
