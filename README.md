@@ -75,3 +75,16 @@ at all times.
 ## Balsamiq
 * Balsamiq was used to create various wireframes of different sizes of the site
 
+# Testing
+
+## HTML Validation
+
+![Validated HTML](/documentation/validation/HTMLValidated.PNG "Validated HTML")
+
+## CSS Validation
+
+![Validated CSS](/documentation/validation/CSSValidated.PNG "Validated CSS")
+
+## Javascript Validation
+
+![Validated Javascript](/documentation/validation/JSValidated.PNG "Validated Javascript")
